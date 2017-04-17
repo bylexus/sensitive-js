@@ -60,6 +60,20 @@ class GameState extends Phaser.State {
         });
         this.timeText.anchor.set(1, 0);
 
+        this.teleportInfoText = this.add.text(20, 65, 'Press -space/tap- to teleport', {
+            font: 'Courier',
+            fontSize: 18,
+            fill: '#fff',
+            shadowColor: '#333',
+            shadowBlur: 3,
+            shadowOffsetX: 1,
+            shadowOffsetY: 1,
+            shadowFill: true
+        });
+        this.add.tween(this.teleportInfoText).to({
+            alpha: 0
+        }, 350, null, true, 0, -1, true);
+
 
         this.map = this.add.tilemap('level-map');
         this.bricks = this.add.group();
@@ -84,6 +98,7 @@ class GameState extends Phaser.State {
 
         // enable keyboard controls:
         this.cursors = this.input.keyboard.createCursorKeys();
+        this.spaceBar = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
 
         // Show start text animation
         this.showStartTextAnim();
@@ -269,6 +284,18 @@ class GameState extends Phaser.State {
                 sprite.animations.add('scroll');
                 sprite.animations.play('scroll', 12, true);
             });
+
+        // teleports:
+        tilemap.createFromObjects('sprites', 'teleport', 'teleport', undefined, true, false, group);
+        group
+            .filter(child => {
+                return child.name === 'teleport';
+            })
+            .list.forEach(sprite => {
+                sprite.alive = false;
+                sprite.animations.add('blink');
+                sprite.animations.play('blink', 2, true);
+            });
     }
 
     findBrickAt(x, y, brickGroup) {
@@ -281,6 +308,19 @@ class GameState extends Phaser.State {
         return null;
     }
 
+    update() {
+        this.animateBG();
+        this.updateTime();
+        this.checkTargetReached();
+        let brickUnderPlayer = this.findBrickAt(this.player.centerX, this.player.centerY, this.bricks);
+        this.actTile = brickUnderPlayer;
+        if (!this.actTile && this.player.alive) {
+            this.playerDies();
+        }
+        this.updatePlayerMovement();
+        this.updateTeleportText();
+        this.checkInput();
+    }
 
     animateBG() {
         this.bgTile.tilePosition.x -= 0.2;
@@ -295,19 +335,12 @@ class GameState extends Phaser.State {
         this.timeText.text = `Time: ${min}:${sec}`;
     }
 
-
-    update() {
-        this.animateBG();
-        this.updateTime();
-        this.checkTargetReached();
-        let brickUnderPlayer = this.findBrickAt(this.player.centerX, this.player.centerY, this.bricks);
-        this.actTile = brickUnderPlayer;
-        if (!this.actTile && this.player.alive) {
-            this.playerDies();
+    updateTeleportText() {
+        if (this.actTile) {
+            this.teleportInfoText.visible = this.actTile.teleportNr > 0;
         }
-        this.updatePlayerMovement();
-        this.checkInput();
     }
+
 
     updatePlayerMovement() {
         if (this.player.alive !== true) {
@@ -392,15 +425,28 @@ class GameState extends Phaser.State {
         }
     }
 
+    findTeleportPeer(origSprite, group) {
+        let peerNr = origSprite.teleportTo;
+        if (peerNr) {
+            let peers = group
+                .filter(child => {
+                    return origSprite !== child && child.teleportNr === peerNr;
+                });
+            if (peers.list.length > 0) {
+                return peers.list[0];
+            }
+        }
+        return null;
+    }
+
     checkTargetReached() {
         if (this.gameState === 'running') {
-            this.physics.arcade.overlap(this.player, this.target, (player, target) => {
+            if (this.target.getBounds().contains(this.player.centerX, this.player.centerY)) {
                 // check if all bricks are gone:
                 if (this.bricks.countLiving() === 0) {
                     this.initiateSuccessSequence();
                 }
-            });
-
+            }
         }
     }
 
@@ -418,6 +464,31 @@ class GameState extends Phaser.State {
         if (!this.keysEnabled) {
             return;
         }
+        // Teleports: transport player to the matching pair teleport:
+        if (this.actTile.teleportNr && this.spaceBar.justDown) {
+            let peer = this.findTeleportPeer(this.actTile, this.bricks);
+            if (peer) {
+                let offTween = this.add.tween(this.player);
+                let onTween = this.add.tween(this.player);
+
+                // teleport animation
+                onTween.to({
+                    alpha: 1
+                }, 200);
+                offTween
+                    .to({
+                        alpha: 0
+                    }, 200)
+                    .onComplete.addOnce(() => {
+                        this.stopPlayerMovement();
+                        this.setPlayerToTopLeftOfTile(peer);
+                        this.actTile = peer;
+                        onTween.start();
+                    }, this);
+                offTween.start();
+            }
+        }
+
         // decide how to move - but can only be done if not in an actual movement:
         if (this.playerDir === Phaser.NONE) {
             if (this.cursors.right.isDown) {

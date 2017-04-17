@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="13" tilewidth="40" tileheight="40" nextobjectid="31">
+ <tileset firstgid="1" name="tiles" tilewidth="40" tileheight="40" tilecount="9" columns="8">
+  <image source="../bricks/tiles.png" width="320" height="40"/>
+ </tileset>
+ <tileset firstgid="10" name="Single sprites" tilewidth="40" tileheight="40" tilecount="1" columns="0">
+  <tile id="1">
+   <image width="40" height="40" source="../bricks/002_player-40.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="12" name="tiles" tilewidth="40" tileheight="40" tilecount="8" columns="8">
+  <image source="../bricks/tiles.png" width="320" height="40"/>
+ </tileset>
+ <layer name="bricks" width="20" height="13">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,3,0,0,0,3,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,3,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,3,0,0,0,3,1,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="header" width="20" height="13">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="sprites">
+  <object id="6" name="target" gid="5" x="480" y="480" width="40" height="40"/>
+  <object id="9" name="teleport" gid="8" x="560" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="5"/>
+    <property name="teleportTo" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="10" name="teleport" gid="19" x="640" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="6"/>
+    <property name="teleportTo" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="11" name="teleport" gid="19" x="480" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="4"/>
+    <property name="teleportTo" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="12" name="teleport" gid="19" x="400" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="3"/>
+    <property name="teleportTo" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="13" name="teleport" gid="19" x="320" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="2"/>
+    <property name="teleportTo" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="14" name="teleport" gid="19" x="240" y="240" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="1"/>
+    <property name="teleportTo" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="15" name="teleport" gid="19" x="320" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="8"/>
+    <property name="teleportTo" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="16" name="teleport" gid="19" x="480" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="10"/>
+    <property name="teleportTo" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="17" name="teleport" gid="19" x="640" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="12"/>
+    <property name="teleportTo" type="int" value="19"/>
+   </properties>
+  </object>
+  <object id="18" name="teleport" gid="19" x="560" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="11"/>
+    <property name="teleportTo" type="int" value="18"/>
+   </properties>
+  </object>
+  <object id="19" name="teleport" gid="19" x="400" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="9"/>
+    <property name="teleportTo" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="20" name="teleport" gid="19" x="240" y="320" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="7"/>
+    <property name="teleportTo" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="21" name="teleport" gid="19" x="320" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="14"/>
+    <property name="teleportTo" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="22" name="teleport" gid="19" x="480" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="16"/>
+    <property name="teleportTo" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="23" name="teleport" gid="19" x="640" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="18"/>
+    <property name="teleportTo" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="24" name="teleport" gid="19" x="560" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="17"/>
+    <property name="teleportTo" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="25" name="teleport" gid="19" x="400" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="15"/>
+    <property name="teleportTo" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="26" name="teleport" gid="19" x="240" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="13"/>
+    <property name="teleportTo" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="27" name="teleport" gid="19" x="400" y="480" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="21"/>
+    <property name="teleportTo" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="28" name="teleport" gid="19" x="240" y="480" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="19"/>
+    <property name="teleportTo" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="29" name="teleport" gid="19" x="320" y="480" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="20"/>
+    <property name="teleportTo" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="30" name="player" gid="11" x="480" y="400" width="40" height="40"/>
+ </objectgroup>
+</map>

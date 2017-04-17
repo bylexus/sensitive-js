@@ -41,11 +41,43 @@ Architecture notes
 +---------------------------------------------------------+
 ```
 
+### Special Stone configurations
+
+#### Player
+
+The player is set in the Object layer "sprites" in TiledMap editor. It has to have the name `player`, so that the game logic can find it during initialization.
+
+#### Target
+
+The target is set in the Object layer "sprites" in TiledMap editor. It has to have the name `target`, so that the game logic can find it during initialization.
+
+#### Teleport Stones
+
+Teleport Stones  have to be added  in the Object layer "sprites" in TiledMap editor. They must have the name "teleport" so that the game can find it. Besides, the two
+custom properties MUST be set:
+
+* `teleportNr`: The ID / Nr of this teleporter
+* `teleportTo`: The ID / Nr of its peer teleporter stone (where the player will be transported to)
+
+Build
+------
+
+```
+$ npm install
+$ npm run build # production build
+- or -
+$ npm watch # dev watch
+```
+
+
+Working
+--------
+
+* Levels 1-9 playable (including normal, double, teleporter stones)
 
 TODO
 -------
 
-* Teleporters (with Object pairs)
 * Kid's levels (easier)
 * Level pages (selectabe levels, already played levels stored in locaStorage (hashed))
   * level infos (e.g. id, title) in info.js
