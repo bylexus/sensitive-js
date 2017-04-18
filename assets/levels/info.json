@@ -1,3 +1,13 @@
 {
-    "lastLevel": 6
+    "normal": [
+        { "id": 1, "data": "assets/levels/normal/level1.json" },
+        { "id": 2, "data": "assets/levels/normal/level2.json" },
+        { "id": 3, "data": "assets/levels/normal/level3.json" },
+        { "id": 4, "data": "assets/levels/normal/level4.json" },
+        { "id": 5, "data": "assets/levels/normal/level5.json" },
+        { "id": 6, "data": "assets/levels/normal/level6.json" },
+        { "id": 7, "data": "assets/levels/normal/level7.json" },
+        { "id": 8, "data": "assets/levels/normal/level8.json" },
+        { "id": 9, "data": "assets/levels/normal/level9.json" }
+    ]
 }

@@ -31,11 +31,16 @@ export default class SplashState extends Phaser.State {
 
         // BG
         this.load.image('galaxy-bg', 'assets/images/galaxy-1.jpg');
+
+        this.load.json('levelinfo', 'assets/levels/info.json');
     }
 
     create() {
+        let levels = this.cache.getJSON('levelinfo');
+        let normalLevels = levels.normal;
         this.state.start('Game',true,false,{
-            level: 1
+            levels: normalLevels,
+            levelIndex: 0
         });
     }
 }

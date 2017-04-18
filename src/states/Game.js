@@ -2,20 +2,19 @@ import Phaser from 'phaser';
 import config from '../config';
 
 class GameState extends Phaser.State {
-    init(options) {
+    init(levelInfo) {
         this.stage.backgroundColor = "#22f";
         this.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.keysEnabled = true;
         this.gameState = 'running';
-        this.level = 1;
 
-        Object.assign(this, options || {});
+        this.levelInfo = levelInfo;
+        this.actLevel = this.levelInfo.levels[this.levelInfo.levelIndex];
     }
 
     preload() {
-        this.load.tilemap('level-map', 'assets/levels/level' + this.level + '.json', null, Phaser.Tilemap.TILED_JSON);
-        this.load.json('levelinfo', 'assets/levels/info.json');
+        this.load.tilemap('level-map', this.actLevel.data, null, Phaser.Tilemap.TILED_JSON);
     }
 
     setPlayerToTopLeftOfTile(tile) {
@@ -44,7 +43,7 @@ class GameState extends Phaser.State {
             shadowFill: true
         });
 
-        this.levelText = this.add.text(this.world.width, 20, 'Level: ' + this.level, {
+        this.levelText = this.add.text(this.world.width, 20, 'Level: ' + this.actLevel.id, {
             font: 'Courier',
             fontSize: 15,
             smoothed: false,
@@ -140,7 +139,7 @@ class GameState extends Phaser.State {
             shadowOffsetY: 3,
             shadowFill: true
         };
-        let stageText = this.add.text(0, this.world.centerY, 'STAGE ' + this.level, fontProps);
+        let stageText = this.add.text(0, this.world.centerY, 'STAGE ' + this.actLevel.id, fontProps);
         stageText.anchor.setTo(0.5, 1);
         stageText.alpha = 0;
 
@@ -552,19 +551,15 @@ class GameState extends Phaser.State {
     }
 
     restartLevel() {
-        this.state.start(this.state.current, true, false, {
-            level: this.level
-        });
+        this.state.start(this.state.current, true, false, this.levelInfo);
     }
 
     initiateNextLevel() {
-        let lastLevel = this.cache.getJSON('levelinfo').lastLevel;
-        if (this.level === lastLevel) {
+        if (this.levelInfo.levelIndex+1 >= this.levelInfo.levels.length) {
             this.state.start('End');
         } else {
-            this.state.start(this.state.current, true, false, {
-                level: ++this.level
-            });
+            this.levelInfo.levelIndex++;
+            this.state.start(this.state.current, true, false, this.levelInfo);
         }
     }
 
