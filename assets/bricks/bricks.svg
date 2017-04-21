@@ -30,12 +30,12 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.5083333"
      inkscape:cx="188.15363"
-     inkscape:cy="933.97528"
+     inkscape:cy="694.77262"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1155"
+     inkscape:window-height="1151"
      inkscape:window-x="1440"
      inkscape:window-y="1"
      inkscape:window-maximized="1" />
@@ -2048,5 +2048,35 @@
            x="318.20337"
            y="61.332081">T</tspan></text>
     </g>
+    <rect
+       style="opacity:1;fill:#86ff86;fill-opacity:1;stroke:#009d00;stroke-width:3.34227681;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4437"
+       width="76.657722"
+       height="76.657722"
+       x="22.651539"
+       y="302.82053"
+       ry="19.482779"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="19.482779"
+       y="302.82053"
+       x="182.65154"
+       height="76.657722"
+       width="76.657722"
+       id="rect4439"
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#848484;stroke-width:3.34227681;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       ry="19.482779"
+       y="302.82053"
+       x="102.65154"
+       height="76.657722"
+       width="76.657722"
+       id="rect4441"
+       style="opacity:1;fill:#ff4646;fill-opacity:1;stroke:#c90000;stroke-width:3.34227681;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

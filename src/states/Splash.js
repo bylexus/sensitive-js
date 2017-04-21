@@ -28,20 +28,25 @@ export default class SplashState extends Phaser.State {
         this.load.spritesheet('2times', './assets/bricks/004_brick-2times.png',40,40);
         this.load.spritesheet('target', './assets/bricks/005_brick-target.png',40,40);
         this.load.spritesheet('teleport', './assets/bricks/008_brick-teleport.png',40,40);
+        this.load.spritesheet('level_chooser', './assets/images/level_chooser.png',80,80);
 
         // BG
         this.load.image('galaxy-bg', 'assets/images/galaxy-1.jpg');
+        this.load.image('galaxy2-bg', 'assets/images/galaxy-2.jpg');
 
         this.load.json('levelinfo', 'assets/levels/info.json');
     }
 
     create() {
-        let levels = this.cache.getJSON('levelinfo');
-        let normalLevels = levels.normal;
-        this.state.start('Game',true,false,{
-            levels: normalLevels,
-            levelIndex: 0
-        });
+        // let levels = this.cache.getJSON('levelinfo');
+        // let normalLevels = levels.normal;
+        // this.state.start('Game',true,false,{
+        //     levels: normalLevels,
+        //     levelIndex: 0
+        // });
+            //
+            //
+        this.state.start('Select',true,false,'normal');
     }
 }
 

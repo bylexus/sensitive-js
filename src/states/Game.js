@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import config from '../config';
+import { storePlayedLevel } from '../utils';
 
 class GameState extends Phaser.State {
     init(levelInfo) {
@@ -23,6 +24,8 @@ class GameState extends Phaser.State {
     }
 
     create() {
+        this.camera.flash('#000',300);
+
         // BG tiled sprite
         let bgWidth = Math.max(this.world.width, this.world.height) * 1.3;
         this.bgTile = this.add.tileSprite(0, 0, bgWidth, bgWidth, 'galaxy-bg');
@@ -540,6 +543,7 @@ class GameState extends Phaser.State {
         this.gameState = 'failed';
         this.playExplosionAt(this.player.centerX, this.player.centerY);
         this.showLooseAnim().onComplete.add(this.restartLevel, this);
+        this.camera.shake(0.01,400);
     }
 
     initiateSuccessSequence() {
@@ -559,6 +563,7 @@ class GameState extends Phaser.State {
             this.state.start('End');
         } else {
             this.levelInfo.levelIndex++;
+            storePlayedLevel(this.levelInfo.difficulty,this.levelInfo.levels[this.levelInfo.levelIndex].id);
             this.state.start(this.state.current, true, false, this.levelInfo);
         }
     }
