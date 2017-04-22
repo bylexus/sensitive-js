@@ -13,6 +13,10 @@
         { "id": 11, "data": "assets/levels/normal/level11.json" },
         { "id": 12, "data": "assets/levels/normal/level12.json" },
         { "id": 13, "data": "assets/levels/normal/level13.json" },
-        { "id": 14, "data": "assets/levels/normal/level14.json" }
+        { "id": 14, "data": "assets/levels/normal/level14.json" },
+        { "id": 15, "data": "assets/levels/normal/level15.json" },
+        { "id": 16, "data": "assets/levels/normal/level16.json" },
+        { "id": 17, "data": "assets/levels/normal/level17.json" },
+        { "id": 18, "data": "assets/levels/normal/level18.json" }
     ]
 }

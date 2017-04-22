@@ -29,6 +29,7 @@ export default class SplashState extends Phaser.State {
         this.load.spritesheet('target', './assets/bricks/005_brick-target.png',40,40);
         this.load.spritesheet('teleport', './assets/bricks/008_brick-teleport.png',40,40);
         this.load.spritesheet('level_chooser', './assets/images/level_chooser.png',80,80);
+        this.load.spritesheet('back_btn', './assets/images/back.png',40,40);
 
         // BG
         this.load.image('galaxy-bg', 'assets/images/galaxy-1.jpg');

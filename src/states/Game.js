@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 import config from '../config';
-import { storePlayedLevel } from '../utils';
+import {
+    storePlayedLevel
+} from '../utils';
 
 class GameState extends Phaser.State {
     init(levelInfo) {
@@ -24,7 +26,7 @@ class GameState extends Phaser.State {
     }
 
     create() {
-        this.camera.flash('#000',300);
+        this.camera.flash('#000', 300);
 
         // BG tiled sprite
         let bgWidth = Math.max(this.world.width, this.world.height) * 1.3;
@@ -33,9 +35,14 @@ class GameState extends Phaser.State {
         this.bgTile.x = this.world.width / 2;
         this.bgTile.y = this.world.height / 2;
 
+        // Back button:
+        this.add.button(5, 20, 'back_btn', btn => {
+            this.backToLevelChooser();
+        }, this, 0, 1, 1, 0);
+
         // Top info: banner, time, level
         const bannerText = 'S E N S I T I V E';
-        this.add.text(20, 20, bannerText, {
+        this.add.text(50, 20, bannerText, {
             font: 'Russo One',
             fontSize: 40,
             fill: '#fcee83',
@@ -62,7 +69,7 @@ class GameState extends Phaser.State {
         });
         this.timeText.anchor.set(1, 0);
 
-        this.teleportInfoText = this.add.text(20, 65, 'Press -space/tap- to teleport', {
+        this.teleportInfoText = this.add.text(50, 65, 'Press -space/tap- to teleport', {
             font: 'Courier',
             fontSize: 18,
             fill: '#fff',
@@ -543,7 +550,7 @@ class GameState extends Phaser.State {
         this.gameState = 'failed';
         this.playExplosionAt(this.player.centerX, this.player.centerY);
         this.showLooseAnim().onComplete.add(this.restartLevel, this);
-        this.camera.shake(0.01,400);
+        this.camera.shake(0.01, 400);
     }
 
     initiateSuccessSequence() {
@@ -558,12 +565,19 @@ class GameState extends Phaser.State {
         this.state.start(this.state.current, true, false, this.levelInfo);
     }
 
+    backToLevelChooser() {
+        this.camera.fade('#f00', 500);
+        this.camera.onFadeComplete.addOnce(() => {
+            this.state.start('Select', true, false, this.levelInfo.difficulty);
+        });
+    }
+
     initiateNextLevel() {
-        if (this.levelInfo.levelIndex+1 >= this.levelInfo.levels.length) {
+        if (this.levelInfo.levelIndex + 1 >= this.levelInfo.levels.length) {
             this.state.start('End');
         } else {
             this.levelInfo.levelIndex++;
-            storePlayedLevel(this.levelInfo.difficulty,this.levelInfo.levels[this.levelInfo.levelIndex].id);
+            storePlayedLevel(this.levelInfo.difficulty, this.levelInfo.levels[this.levelInfo.levelIndex].id);
             this.state.start(this.state.current, true, false, this.levelInfo);
         }
     }
