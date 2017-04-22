@@ -8,6 +8,11 @@
         { "id": 6, "data": "assets/levels/normal/level6.json" },
         { "id": 7, "data": "assets/levels/normal/level7.json" },
         { "id": 8, "data": "assets/levels/normal/level8.json" },
-        { "id": 9, "data": "assets/levels/normal/level9.json" }
+        { "id": 9, "data": "assets/levels/normal/level9.json" },
+        { "id": 10, "data": "assets/levels/normal/level10.json" },
+        { "id": 11, "data": "assets/levels/normal/level11.json" },
+        { "id": 12, "data": "assets/levels/normal/level12.json" },
+        { "id": 13, "data": "assets/levels/normal/level13.json" },
+        { "id": 14, "data": "assets/levels/normal/level14.json" }
     ]
 }

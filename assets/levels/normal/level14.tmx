@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="13" tilewidth="40" tileheight="40" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="13" tilewidth="40" tileheight="40" nextobjectid="37">
  <tileset firstgid="1" name="tiles" tilewidth="40" tileheight="40" tilecount="8" columns="8">
   <image source="../../bricks/tiles.png" width="320" height="40"/>
  </tileset>
@@ -17,14 +17,14 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,4,0,3,0,0,3,3,3,3,0,0,3,3,0,0,0,0,0,0,
-0,3,3,3,0,0,3,3,3,3,3,3,3,3,0,0,0,0,0,0,
-0,0,0,0,0,0,0,3,3,0,0,3,3,3,3,0,0,0,0,0,
-0,0,0,0,0,0,0,3,0,0,0,3,3,3,3,3,0,0,0,0,
-0,0,0,0,0,0,3,3,0,0,0,3,3,3,3,1,1,1,0,0,
-0,0,0,0,0,0,3,3,0,0,0,3,3,0,0,1,0,0,0,0,
-0,0,0,0,0,0,0,3,3,3,3,3,0,0,0,1,1,1,1,0,
+0,0,0,0,0,0,3,3,3,0,0,0,1,0,0,0,0,0,0,0,
+0,3,3,3,0,0,3,3,3,0,0,0,0,0,3,3,3,0,1,0,
+0,3,0,3,0,0,3,3,3,3,3,3,0,0,3,0,3,0,0,0,
+0,3,3,3,3,3,3,0,0,3,3,3,0,0,3,3,3,0,0,0,
+0,0,0,0,3,3,3,0,0,3,3,3,3,3,3,0,0,0,0,0,
+0,1,0,0,3,3,3,0,0,0,0,0,3,3,3,0,0,1,1,0,
+0,0,1,0,0,0,0,0,1,0,0,0,3,3,3,0,1,1,1,0,
+0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
@@ -46,19 +46,25 @@
 </data>
  </layer>
  <objectgroup name="sprites">
-  <object id="13" name="teleport" gid="18" x="720" y="400" width="40" height="40">
+  <object id="31" name="target" gid="5" x="720" y="480" width="40" height="40"/>
+  <object id="34" name="teleport" gid="8" x="600" y="280" width="40" height="40">
    <properties>
     <property name="teleportNr" type="int" value="2"/>
-    <property name="teleportTo" type="int" value="1"/>
+    <property name="teleportTo" type="int" value="3"/>
    </properties>
   </object>
-  <object id="14" name="teleport" gid="18" x="80" y="240" width="40" height="40">
+  <object id="35" name="teleport" gid="8" x="80" y="280" width="40" height="40">
    <properties>
     <property name="teleportNr" type="int" value="1"/>
     <property name="teleportTo" type="int" value="2"/>
    </properties>
   </object>
-  <object id="30" name="player" gid="10" x="640" y="400" width="40" height="40"/>
-  <object id="31" name="target" gid="5" x="720" y="480" width="40" height="40"/>
+  <object id="36" name="teleport" gid="8" x="640" y="400" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="3"/>
+    <property name="teleportTo" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="30" name="player" gid="10" x="80" y="280" width="40" height="40"/>
  </objectgroup>
 </map>
