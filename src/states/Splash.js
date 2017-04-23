@@ -36,6 +36,9 @@ export default class SplashState extends Phaser.State {
         this.load.image('galaxy2-bg', 'assets/images/galaxy-2.jpg');
 
         this.load.json('levelinfo', 'assets/levels/info.json');
+
+        // Songs
+        this.load.audio('song1',['assets/audio/song1-loop.ogg','assets/audio/song1-loop.mp3']);
     }
 
     create() {
@@ -47,6 +50,7 @@ export default class SplashState extends Phaser.State {
         // });
             //
             //
+        this.game.add.audio('song1',0.5,true).play();
         this.state.start('Select',true,false,'normal');
     }
 }

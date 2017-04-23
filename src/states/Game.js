@@ -114,6 +114,16 @@ class GameState extends Phaser.State {
 
         // Save start time
         this.startTime = new Date().getTime();
+
+        // register tap handlers:
+        this.input.onDown.add(function(pointer){
+            this.downPointer = pointer;
+        },this);
+        this.input.onUp.add(function(pointer){
+            this.downPointer = null;
+        },this);
+        this.pointerLine = this.add.graphics(0,0);
+        this.pointerDir = Phaser.NONE;
     }
 
     showBgDim(duration, after) {
@@ -320,6 +330,7 @@ class GameState extends Phaser.State {
     update() {
         this.animateBG();
         this.updateTime();
+        this.updatePointerIndicator();
         this.checkTargetReached();
         let brickUnderPlayer = this.findBrickAt(this.player.centerX, this.player.centerY, this.bricks);
         this.actTile = brickUnderPlayer;
@@ -347,6 +358,47 @@ class GameState extends Phaser.State {
     updateTeleportText() {
         if (this.actTile) {
             this.teleportInfoText.visible = this.actTile.teleportNr > 0;
+        }
+    }
+
+    updatePointerIndicator() {
+        if (this.downPointer) {
+            let x = this.downPointer.positionDown.x;
+            let y = this.downPointer.positionDown.y;
+            let toX = this.downPointer.position.x;
+            let toY = this.downPointer.position.y;
+            let dX = toX - x;
+            let dY = toY - y;
+            let absX = Math.abs(dX);
+            let absY = Math.abs(dY);
+
+            this.pointerDir = Phaser.NONE;
+            if (absX > absY) {
+                // horizontal movement
+                if (dX > 20) {
+                    this.pointerDir = Phaser.RIGHT;
+                }
+                if (dX < -20) {
+                    this.pointerDir = Phaser.LEFT;
+                }
+            } else {
+                // vertical movement
+                if (dY > 20) {
+                    this.pointerDir = Phaser.DOWN;
+                }
+                if (dY < -20) {
+                    this.pointerDir = Phaser.UP;
+                }
+            }
+
+            // draw a ling from the down pointer's start position to the actual position:
+            this.pointerLine.clear();
+            this.pointerLine.lineStyle(3,0xffffff,1);
+            this.pointerLine.moveTo(x,y);
+            this.pointerLine.lineTo(toX,toY);
+        } else {
+            this.pointerLine.clear();
+            this.pointerDir = Phaser.NONE;
         }
     }
 
@@ -428,7 +480,7 @@ class GameState extends Phaser.State {
 
             // Only reset the player to the center if the actual direction's
             // down key is not hold (prevents player flickering forth and back)
-            if (this.playerDir === Phaser.NONE && (!downKey || !downKey.isDown)) {
+            if (this.playerDir === Phaser.NONE && (!downKey || !downKey.isDown) && this.pointerDir === Phaser.NONE) {
                 this.setPlayerToTopLeftOfTile(onTile);
             }
         }
@@ -500,28 +552,28 @@ class GameState extends Phaser.State {
 
         // decide how to move - but can only be done if not in an actual movement:
         if (this.playerDir === Phaser.NONE) {
-            if (this.cursors.right.isDown) {
+            if (this.cursors.right.isDown || this.pointerDir === Phaser.RIGHT) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'horizontal')) {
                     this.player.body.velocity.x = config.playerSpeed;
                     this.player.body.velocity.y = 0;
                     this.playerDir = Phaser.RIGHT;
                 }
             }
-            if (this.cursors.left.isDown) {
+            if (this.cursors.left.isDown || this.pointerDir === Phaser.LEFT) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'horizontal')) {
                     this.player.body.velocity.x = -1 * config.playerSpeed;
                     this.player.body.velocity.y = 0;
                     this.playerDir = Phaser.LEFT;
                 }
             }
-            if (this.cursors.up.isDown) {
+            if (this.cursors.up.isDown || this.pointerDir === Phaser.UP) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'vertical')) {
                     this.player.body.velocity.x = 0;
                     this.player.body.velocity.y = -1 * config.playerSpeed;
                     this.playerDir = Phaser.UP;
                 }
             }
-            if (this.cursors.down.isDown) {
+            if (this.cursors.down.isDown || this.pointerDir === Phaser.DOWN) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'vertical')) {
                     this.player.body.velocity.x = 0;
                     this.player.body.velocity.y = config.playerSpeed;

@@ -30,7 +30,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.5083333"
      inkscape:cx="188.15363"
-     inkscape:cy="694.77262"
+     inkscape:cy="870.1879"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,6 +41,42 @@
      inkscape:window-maximized="1" />
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4481">
+      <stop
+         style="stop-color:#e8d9c8;stop-opacity:1"
+         offset="0"
+         id="stop4483" />
+      <stop
+         style="stop-color:#e62c50;stop-opacity:1"
+         offset="1"
+         id="stop4485" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4454"
+       inkscape:collect="always">
+      <stop
+         id="stop4456"
+         offset="0"
+         style="stop-color:#c8e6c8;stop-opacity:1" />
+      <stop
+         id="stop4458"
+         offset="1"
+         style="stop-color:#50b650;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4172">
+      <stop
+         style="stop-color:#c8c8c8;stop-opacity:1"
+         offset="0"
+         id="stop4448" />
+      <stop
+         style="stop-color:#505050;stop-opacity:1"
+         offset="1"
+         id="stop4450" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient4903">
@@ -129,18 +165,6 @@
          height="2"
          id="rect4924" />
     </pattern>
-    <linearGradient
-       id="linearGradient4172"
-       inkscape:collect="always">
-      <stop
-         id="stop4174"
-         offset="0"
-         style="stop-color:#c8c8c8;stop-opacity:1" />
-      <stop
-         id="stop4176"
-         offset="1"
-         style="stop-color:#505050;stop-opacity:1" />
-    </linearGradient>
     <linearGradient
        osb:paint="gradient"
        id="linearGradient4164">
@@ -714,6 +738,26 @@
        y1="45.667896"
        x2="37.73872"
        y2="43.973545" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4454"
+       id="linearGradient4442"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(119.16997,211.29527)"
+       x1="55.347076"
+       y1="60.11972"
+       x2="25.180584"
+       y2="30.418724" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4481"
+       id="linearGradient4479"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(165.01715,211.29527)"
+       x1="55.347076"
+       y1="60.11972"
+       x2="25.180584"
+       y2="30.418724" />
   </defs>
   <metadata
      id="metadata7">
@@ -2078,5 +2122,49 @@
        style="opacity:1;fill:#ff4646;fill-opacity:1;stroke:#c90000;stroke-width:3.34227681;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <g
+       id="g4491"
+       transform="translate(-7.2422811,0)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/back.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         ry="6.3787374"
+         y="237.91"
+         x="140.67964"
+         height="36.51162"
+         width="36.51162"
+         id="rect4440"
+         style="opacity:1;fill:url(#linearGradient4442);fill-opacity:1;stroke:#00a400;stroke-width:3.48799992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4464"
+         d="m 160.2706,249.03703 -11.40625,7.13086 11.40625,7.12695 0,-3.58789 9.16406,0 0,-7.08008 -9.16406,0 0,-3.58984 z"
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4487"
+       transform="translate(-13.089845,0)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/back.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="opacity:1;fill:url(#linearGradient4479);fill-opacity:1;stroke:#e53900;stroke-width:3.48799992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4475"
+         width="36.51162"
+         height="36.51162"
+         x="186.52682"
+         y="237.91"
+         ry="6.3787374"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 206.11778,249.03703 -11.40625,7.13086 11.40625,7.12695 0,-3.58789 9.16406,0 0,-7.08008 -9.16406,0 0,-3.58984 z"
+         id="path4477"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>

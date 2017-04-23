@@ -82,9 +82,10 @@ TODO
 * Level pages (selectabe levels, already played levels stored in locaStorage (hashed))
   * level infos (e.g. id, title) in info.js
   * stored in localStorage (id hashed)
-* store progress in localStorage
 * soundtrack
-* Virtual Joystick for mobile users
+* settings page (disable sound, e.g.)
+* sound effects
+* better splash sceen + loader
 
 Copyright Violations
 --------------------
