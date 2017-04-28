@@ -1,5 +1,8 @@
 import Phaser from 'phaser';
-import { loadPlayedLevels,storePlayedLevel }  from '../utils';
+import {
+    loadPlayedLevels,
+    storePlayedLevel
+} from '../utils';
 
 export default class SelectState extends Phaser.State {
     init(difficulty) {
@@ -35,18 +38,23 @@ export default class SelectState extends Phaser.State {
             shadowFill: true
         });
 
-        levelGroup.y = 80;
-
         // draw level select boxes
+        let topMargin = 80;
+        let nrOfLevelsPerScreen = 15;
+        let nrOfLevels = Math.ceil(levelArr.length / nrOfLevelsPerScreen);
+        let screenHeight = this.world.height - topMargin;
         let nrOfBoxesPerRow = Math.floor(this.world.width / (2 * this.levelBoxWidth));
-        let playedLevels = loadPlayedLevels(this.difficulty,levelArr[0].id);
+        let playedLevels = loadPlayedLevels(this.difficulty, levelArr[0].id);
+
+        levelGroup.y = topMargin;
 
         levelArr.forEach((levelInfo, index) => {
-            let row = Math.floor(index / nrOfBoxesPerRow);
+            let screenNr = Math.floor(index / nrOfLevelsPerScreen);
+            let row = Math.floor(index / nrOfBoxesPerRow) % (nrOfLevelsPerScreen / nrOfBoxesPerRow);
             let col = index % nrOfBoxesPerRow;
-
+            let screenOffsetY = screenNr * this.world.height;
             let x = 2 * this.levelBoxWidth * col + (this.levelBoxWidth / 2);
-            let y = (this.levelBoxWidth * 1.5) * row;
+            let y = (this.levelBoxWidth * 1.5) * row + screenOffsetY;
             let button;
 
             if (playedLevels.indexOf(levelInfo.id) > -1) {
@@ -56,12 +64,27 @@ export default class SelectState extends Phaser.State {
                 }, this, 1, 0, 0, 1, levelGroup);
             } else {
                 // level not yet played, so not available:
-                button = this.add.button(x, y, 'level_chooser', null,null, 2,2,2,2, levelGroup);
+                button = this.add.button(x, y, 'level_chooser', null, null, 2, 2, 2, 2, levelGroup);
                 button.alive = false;
             }
 
             button.levelInfo = levelInfo;
             button.levelIndex = index;
+
+            if (screenNr < (nrOfLevels - 1)) {
+                // add down btn
+                let downBtn = this.add.button(this.world.centerX,screenHeight - 5 + screenOffsetY,'down_btn', btn => {
+                    this.add.tween(levelGroup).to({y: levelGroup.y - this.world.height},300,Phaser.Easing.Cubic.InOut,true);
+                },this,1,0,0,1,levelGroup);
+                downBtn.anchor.set(0.5,1);
+            }
+            if (screenNr > 0) {
+                // add up btn
+                let upBtn = this.add.button(this.world.centerX,screenHeight - 40 + screenOffsetY,'up_btn', btn => {
+                    this.add.tween(levelGroup).to({y: levelGroup.y + this.world.height},300,Phaser.Easing.Cubic.InOut,true);
+                },this,1,0,0,1,levelGroup);
+                upBtn.anchor.set(0.5,1);
+            }
 
 
             let fontProps = {
@@ -88,8 +111,8 @@ export default class SelectState extends Phaser.State {
     }
 
     initiateLevelStart(levelIndex, levelArr) {
-        this.camera.fade('#f00',350);
-        storePlayedLevel(this.difficulty,levelArr[levelIndex].id);
+        this.camera.fade('#f00', 350);
+        storePlayedLevel(this.difficulty, levelArr[levelIndex].id);
 
         this.camera.onFadeComplete.addOnce(() => {
             this.state.start('Game', true, false, {

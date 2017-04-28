@@ -30,6 +30,8 @@ export default class SplashState extends Phaser.State {
         this.load.spritesheet('teleport', './assets/bricks/008_brick-teleport.png',40,40);
         this.load.spritesheet('level_chooser', './assets/images/level_chooser.png',80,80);
         this.load.spritesheet('back_btn', './assets/images/back.png',40,40);
+        this.load.spritesheet('up_btn', './assets/images/btn_up.png',80,35);
+        this.load.spritesheet('down_btn', './assets/images/btn_down.png',80,35);
 
         // BG
         this.load.image('galaxy-bg', 'assets/images/galaxy-1.jpg');
@@ -37,8 +39,9 @@ export default class SplashState extends Phaser.State {
 
         this.load.json('levelinfo', 'assets/levels/info.json');
 
-        // Songs
+        // Audio
         this.load.audio('song1',['assets/audio/song1-loop.ogg','assets/audio/song1-loop.mp3']);
+        this.load.audio('explode',['assets/audio/explode.ogg','assets/audio/explode.mp3']);
     }
 
     create() {

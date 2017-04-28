@@ -29,14 +29,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.5083333"
-     inkscape:cx="188.15363"
-     inkscape:cy="870.1879"
+     inkscape:cx="382.52173"
+     inkscape:cy="627.79587"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1151"
-     inkscape:window-x="1440"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
      inkscape:window-y="1"
      inkscape:window-maximized="1" />
   <defs
@@ -2165,6 +2165,138 @@
          d="m 206.11778,249.03703 -11.40625,7.13086 11.40625,7.12695 0,-3.58789 9.16406,0 0,-7.08008 -9.16406,0 0,-3.58984 z"
          id="path4477"
          inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4483"
+       transform="matrix(1.0099604,0,0,0.99967889,-1.3264174,0.53426162)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_down.png"
+       inkscape:export-xdpi="90.589996"
+       inkscape:export-ydpi="90.589996">
+      <rect
+         style="opacity:1;fill:#86ff86;fill-opacity:1;stroke:#009d00;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4454"
+         width="77.030373"
+         height="32.808163"
+         x="24.867016"
+         y="405.84995"
+         ry="8.3382883"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 56.253424,420.91888 7.13086,11.40625 7.12695,-11.40625 -3.58789,0 0,-9.16406 -7.08008,0 0,9.16406 -3.58984,0 z"
+         id="path4465"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4479"
+       transform="matrix(1.0099604,0,0,0.99967889,-2.504732,0.53426162)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_down.png"
+       inkscape:export-xdpi="90.589996"
+       inkscape:export-ydpi="90.589996">
+      <rect
+         ry="8.3382883"
+         y="405.84995"
+         x="105.25592"
+         height="32.808163"
+         width="77.030373"
+         id="rect4458"
+         style="opacity:1;fill:#ff4646;fill-opacity:1;stroke:#c90000;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4471"
+         d="m 136.64233,420.91888 7.13086,11.40625 7.12695,-11.40625 -3.58789,0 0,-9.16406 -7.08008,0 0,9.16406 -3.58984,0 z"
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4475"
+       transform="matrix(1.0098112,0,0,1.0000101,-3.6554927,0.38886329)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_down.png"
+       inkscape:export-xdpi="90.589996"
+       inkscape:export-ydpi="90.589996">
+      <rect
+         ry="8.3382883"
+         y="405.84995"
+         x="185.64481"
+         height="32.808163"
+         width="77.030373"
+         id="rect4456"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#848484;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="opacity:1;fill:#978868;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 217.03121,420.91888 7.13086,11.40625 7.12695,-11.40625 -3.58789,0 0,-9.16406 -7.08008,0 0,9.16406 -3.58984,0 z"
+         id="path4473"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4512"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_up.png"
+       transform="matrix(1.0099604,0,0,0.99967889,-3.5778431,0.13635862)">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         ry="8.3382883"
+         y="408.24197"
+         x="280.5188"
+         height="32.808163"
+         width="77.030373"
+         id="rect4490"
+         style="opacity:1;fill:#86ff86;fill-opacity:1;stroke:#009d00;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4492"
+         d="m 326.16277,425.9812 -7.13086,-11.40625 -7.12695,11.40625 3.58789,0 0,9.16406 7.08008,0 0,-9.16406 3.58984,0 z"
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4516"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(1.0099604,0,0,0.99967889,-3.5778617,0.13635862)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_up.png">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         style="opacity:1;fill:#ff4646;fill-opacity:1;stroke:#c90000;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4496"
+         width="77.030373"
+         height="32.808163"
+         x="359.74103"
+         y="408.24197"
+         ry="8.3382883" />
+      <path
+         style="opacity:1;fill:#ffad00;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 405.38499,425.9812 -7.13086,-11.40625 -7.12695,11.40625 3.58789,0 0,9.16406 7.08008,0 0,-9.16406 3.58984,0 z"
+         id="path4498"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4520"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(1.0099604,0,0,0.99967889,-3.5778494,0.13635862)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/btn_up.png">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#848484;stroke-width:2.19183803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4502"
+         width="77.030373"
+         height="32.808163"
+         x="438.96323"
+         y="408.24197"
+         ry="8.3382883" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4504"
+         d="m 484.60719,425.9812 -7.13086,-11.40625 -7.12695,11.40625 3.58789,0 0,9.16406 7.08008,0 0,-9.16406 3.58984,0 z"
+         style="opacity:1;fill:#978868;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
   </g>
 </svg>

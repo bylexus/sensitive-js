@@ -124,6 +124,9 @@ class GameState extends Phaser.State {
         },this);
         this.pointerLine = this.add.graphics(0,0);
         this.pointerDir = Phaser.NONE;
+
+        // register audio:
+        this.explosion = this.add.audio('explode');
     }
 
     showBgDim(duration, after) {
@@ -601,6 +604,7 @@ class GameState extends Phaser.State {
         this.keysEnabled = false;
         this.gameState = 'failed';
         this.playExplosionAt(this.player.centerX, this.player.centerY);
+        this.explosion.play();
         this.showLooseAnim().onComplete.add(this.restartLevel, this);
         this.camera.shake(0.01, 400);
     }
