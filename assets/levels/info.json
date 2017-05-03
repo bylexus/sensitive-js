@@ -17,6 +17,20 @@
         { "id": 15, "data": "assets/levels/normal/level15.json" },
         { "id": 16, "data": "assets/levels/normal/level16.json" },
         { "id": 17, "data": "assets/levels/normal/level17.json" },
-        { "id": 18, "data": "assets/levels/normal/level18.json" }
+        { "id": 18, "data": "assets/levels/normal/level18.json" },
+        { "id": 19, "data": "assets/levels/normal/level19.json" },
+        { "id": 20, "data": "assets/levels/normal/level20.json" },
+        { "id": 21, "data": "assets/levels/normal/level21.json" },
+        { "id": 22, "data": "assets/levels/normal/level22.json" },
+        { "id": 23, "data": "assets/levels/normal/level23.json" },
+        { "id": 24, "data": "assets/levels/normal/level24.json" }
+    ],
+    "easy": [
+        { "id": 1, "data": "assets/levels/easy/level1.json" },
+        { "id": 2, "data": "assets/levels/easy/level2.json" },
+        { "id": 3, "data": "assets/levels/easy/level3.json" },
+        { "id": 4, "data": "assets/levels/easy/level4.json" },
+        { "id": 5, "data": "assets/levels/easy/level5.json" },
+        { "id": 6, "data": "assets/levels/easy/level6.json" }
     ]
 }

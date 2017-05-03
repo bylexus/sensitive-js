@@ -32,6 +32,7 @@ export default class SplashState extends Phaser.State {
         this.load.spritesheet('back_btn', './assets/images/back.png',40,40);
         this.load.spritesheet('up_btn', './assets/images/btn_up.png',80,35);
         this.load.spritesheet('down_btn', './assets/images/btn_down.png',80,35);
+        this.load.spritesheet('difficulty_level_btn', './assets/images/difficulty_level.png',150,60);
 
         // BG
         this.load.image('galaxy-bg', 'assets/images/galaxy-1.jpg');
@@ -54,7 +55,8 @@ export default class SplashState extends Phaser.State {
             //
             //
         this.game.add.audio('song1',0.5,true).play();
-        this.state.start('Select',true,false,'normal');
+        // this.state.start('Select',true,false,'normal');
+        this.state.start('Title');
     }
 }
 

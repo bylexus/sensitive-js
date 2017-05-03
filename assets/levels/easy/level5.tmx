@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="13" tilewidth="40" tileheight="40" nextobjectid="48">
+ <tileset firstgid="1" name="tiles" tilewidth="40" tileheight="40" tilecount="8" columns="8">
+  <image source="../../bricks/tiles.png" width="320" height="40"/>
+ </tileset>
+ <tileset firstgid="9" name="Single sprites" tilewidth="40" tileheight="40" tilecount="1" columns="0">
+  <tile id="1">
+   <image width="40" height="40" source="../../bricks/002_player-40.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="11" name="tiles" tilewidth="40" tileheight="40" tilecount="8" columns="8">
+  <image source="../../bricks/tiles.png" width="320" height="40"/>
+ </tileset>
+ <layer name="bricks" width="20" height="13">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,
+0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,
+0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="header" width="20" height="13">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="sprites">
+  <object id="31" name="target" gid="5" x="360" y="200" width="40" height="40"/>
+  <object id="30" name="player" gid="10" x="360" y="240" width="40" height="40"/>
+  <object id="37" name="teleport" gid="8" x="360" y="360" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="1"/>
+    <property name="teleportTo" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="43" name="teleport" gid="8" x="520" y="360" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="2"/>
+    <property name="teleportTo" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="44" name="teleport" gid="8" x="520" y="480" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="3"/>
+    <property name="teleportTo" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="45" name="teleport" gid="8" x="200" y="480" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="4"/>
+    <property name="teleportTo" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="46" name="teleport" gid="8" x="200" y="360" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="5"/>
+    <property name="teleportTo" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="47" name="teleport" gid="8" x="360" y="160" width="40" height="40">
+   <properties>
+    <property name="teleportNr" type="int" value="6"/>
+    <property name="teleportTo" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

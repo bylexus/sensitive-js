@@ -100,6 +100,7 @@ class GameState extends Phaser.State {
         // create player sprite:
         this.map.createFromObjects('sprites', 'player', 'player', undefined, true, false, this.sprites);
         this.player = this.sprites.getByName('player');
+        this.player.alive = false; // will be enabled after start text anim
         this.playerDir = Phaser.NONE;
 
         this.physics.arcade.enable([this.player, this.bricks, this.target]);
@@ -199,6 +200,7 @@ class GameState extends Phaser.State {
             }, 300)
             .delay(1500, 1)
             .onComplete.addOnce(() => {
+                this.player.alive = true;
                 readyText.destroy();
             });
         onTweenReadyText.start();
@@ -346,9 +348,9 @@ class GameState extends Phaser.State {
     }
 
     animateBG() {
-        this.bgTile.tilePosition.x -= 0.2;
-        this.bgTile.tilePosition.y += 0.05;
-        this.bgTile.angle += 0.01;
+        this.bgTile.tilePosition.x -= this.time.elapsedMS * 0.002;
+        this.bgTile.tilePosition.y += this.time.elapsedMS * 0.005;
+        this.bgTile.angle += this.time.elapsedMS * 0.001;
     }
 
     updateTime() {

@@ -28,15 +28,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.5083333"
+     inkscape:zoom="1.2541667"
      inkscape:cx="382.52173"
-     inkscape:cy="627.79587"
+     inkscape:cy="755.37061"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="851"
-     inkscape:window-x="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1151"
+     inkscape:window-x="1440"
      inkscape:window-y="1"
      inkscape:window-maximized="1" />
   <defs
@@ -67,7 +67,8 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient4172">
+       id="linearGradient4172"
+       osb:paint="gradient">
       <stop
          style="stop-color:#c8c8c8;stop-opacity:1"
          offset="0"
@@ -197,7 +198,7 @@
        id="linearGradient4170"
        xlink:href="#linearGradient4140"
        inkscape:collect="always"
-       gradientTransform="translate(4.9086896,7.1760766)" />
+       gradientTransform="translate(4.2591986,7.1760766)" />
     <linearGradient
        gradientUnits="userSpaceOnUse"
        y2="30.418724"
@@ -207,7 +208,7 @@
        id="linearGradient4178"
        xlink:href="#linearGradient4172"
        inkscape:collect="always"
-       gradientTransform="translate(4.9086896,7.1760766)" />
+       gradientTransform="translate(4.2591986,7.1760766)" />
     <linearGradient
        gradientTransform="translate(47.541528,0)"
        y2="43.973545"
@@ -758,6 +759,16 @@
        y1="60.11972"
        x2="25.180584"
        y2="30.418724" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4140"
+       id="linearGradient4492"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(324.25788,7.1760766)"
+       x1="39.400234"
+       y1="45.667896"
+       x2="37.73872"
+       y2="43.973545" />
   </defs>
   <metadata
      id="metadata7">
@@ -776,7 +787,7 @@
      inkscape:groupmode="layer"
      inkscape:label="Ebene 1">
     <g
-       transform="translate(-88.773138,409.25835)"
+       transform="translate(465.37969,-42.037337)"
        id="g6178">
       <g
          transform="matrix(0.96592583,-0.25881905,0.25881905,0.96592583,36.729214,144.61474)"
@@ -1635,7 +1646,7 @@
        inkscape:export-xdpi="90"
        ry="0"
        y="33.790817"
-       x="26.418369"
+       x="25.768879"
        height="36.51162"
        width="36.51162"
        id="rect4136"
@@ -1644,7 +1655,7 @@
        id="g6098"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
-       transform="translate(76.370293,53.621258)">
+       transform="translate(75.720803,53.621258)">
       <g
          id="g6064"
          transform="translate(0.99667776,-46.445182)">
@@ -1729,7 +1740,7 @@
     </g>
     <g
        id="g5274"
-       transform="translate(7.1076206e-5,0)"
+       transform="translate(-0.64941912,0)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -1822,7 +1833,7 @@
     </g>
     <g
        id="g5008"
-       transform="translate(-255.98063,1.5946823)"
+       transform="translate(-256.63012,1.5946823)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -1845,7 +1856,7 @@
     </g>
     <g
        id="g5012"
-       transform="translate(-272.0797,1.5946823)"
+       transform="translate(-272.72919,1.5946823)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -1868,7 +1879,7 @@
     </g>
     <g
        id="g4929"
-       transform="translate(-138.45524,-275.65808)"
+       transform="translate(-139.10473,-275.65808)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -1895,7 +1906,7 @@
     <g
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       transform="translate(37.36697,7.1760763)"
+       transform="translate(36.717479,7.1760763)"
        id="g4982">
       <g
          id="g4984"
@@ -1957,7 +1968,7 @@
        id="g5259"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
-       transform="translate(2.6800995e-4,0)">
+       transform="translate(-0.64922219,0)">
       <rect
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
@@ -2298,5 +2309,149 @@
          d="m 484.60719,425.9812 -7.13086,-11.40625 -7.12695,11.40625 3.58789,0 0,9.16406 7.08008,0 0,-9.16406 3.58984,0 z"
          style="opacity:1;fill:#978868;fill-opacity:1;stroke:#000000;stroke-width:0.96548736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <g
+       id="g4497"
+       transform="translate(-26.462001,-35.083078)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/difficulty_level.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         ry="8.1300497"
+         y="521.80853"
+         x="51.780067"
+         height="56.752346"
+         width="146.75235"
+         id="rect4472"
+         style="opacity:1;fill:#ffae00;fill-opacity:1;stroke:#e53900;stroke-width:3.24765253;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4474"
+         y="561.60468"
+         x="82.126244"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#e53900;fill-opacity:1;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="561.60468"
+           x="82.126244"
+           id="tspan4476"
+           sodipodi:role="line">Easy</tspan></text>
+    </g>
+    <g
+       id="g4502"
+       transform="translate(-28.754191,-35.083078)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/difficulty_level.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="opacity:1;fill:#ffca59;fill-opacity:1;stroke:#e53900;stroke-width:3.24799991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4478"
+         width="146.75235"
+         height="56.752346"
+         x="204.07243"
+         y="521.80853"
+         ry="8.1300497" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#ff6937;fill-opacity:1;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="234.41861"
+         y="561.60468"
+         id="text4480"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4482"
+           x="234.41861"
+           y="561.60468">Easy</tspan></text>
+    </g>
+    <g
+       id="g4507"
+       transform="translate(-39.817141,-34.285715)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/difficulty_level.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="opacity:1;fill:#ffae00;fill-opacity:1;stroke:#e53900;stroke-width:3.24765253;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4484"
+         width="146.75235"
+         height="56.752346"
+         x="365.13556"
+         y="521.01117"
+         ry="8.1300497" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#e53900;fill-opacity:1;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="370.41141"
+         y="560.80731"
+         id="text4486"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4488"
+           x="370.41141"
+           y="560.80731">Normal</tspan></text>
+    </g>
+    <g
+       id="g4513"
+       transform="translate(-42.109323,-34.285715)"
+       inkscape:export-filename="/Users/alex/dev/sensitive-js/assets/images/difficulty_level.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         ry="8.1300497"
+         y="521.01117"
+         x="517.42792"
+         height="56.752346"
+         width="146.75235"
+         id="rect4491"
+         style="opacity:1;fill:#ffca59;fill-opacity:1;stroke:#e53900;stroke-width:3.24799991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4493"
+         y="560.80731"
+         x="522.7038"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#ff6937;fill-opacity:1;stroke:#000000;stroke-width:2.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="560.80731"
+           x="522.7038"
+           id="tspan4495"
+           sodipodi:role="line">Normal</tspan></text>
+    </g>
+    <image
+       y="32.046627"
+       x="344.02335"
+       id="image6007"
+       xlink:href="data:image/jpeg;base64,/9j/2wCEAAIBAQEBAQIBAQIDAgECAwMCAgICAwMDAwMDAwMFAwQEBAQDBQUFBgYGBQUHBwgIBwcK
+CgoKCgwMDAwMDAwMDAwBAgICBAMEBwUFBwoIBwgKDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/dAAQABf/uAA5BZG9iZQBkwAAAAAH/wAARCAAoACgDABEA
+AREBAhEB/8QAdAAAAgMBAQAAAAAAAAAAAAAABgcDBAkFAgEBAQEBAAAAAAAAAAAAAAAAAAECAxAA
+AgIBAwQBAgUFAQAAAAAAAQIDBAUABhEHEiExEwgUFUFRYZEiIzIzcaERAQEBAQADAQEAAAAAAAAA
+AAABEQIDYaESQf/aAAwDAAABEQIRAD8AwPxWMxF7F37Fu8a+ZgWJsfS+B5BcZpAsi/ICBH2Jy3kH
+u9DVHPHv9dQSWJoZQghiEfaoV+Cx7mHtvPrn9B40EegtYbGwZW+lSzbhpVjwZLNov2IvIBPEasx4
+B54UEn8tB//QwWxu3oLmHgylLI1/xt7b1jjH+WOWGJIkkW1JLIgriMsxX/Z3cqeRxwSxZumF1x6a
+dINo7Zw29uluXfdDZWvG2eNKvPDitv5dXeKfHfNOBJYZvj+aN+1EMbgL3lWOuvk55kll3fnp28vH
+PMl5u789FlHjreRoW8yJIVhqmISo8sMcrfKxRfiiYhnA489gPaPfGuTgqIjO4jQcuTwB+50FpLWP
+hw8+Nmphsw00Ukd4ySBoo41dXiEYPYQ7Mp5Pkdvj2dB//9HASwtyqzY+2rRyRMyvDICpRweCGU8E
+EHx50E0V+7XxUmMM8gxdllmeskjiNpYeVjkdAe0lQzAEjkAnj3oPFXHPeKR03V7TkKIWPY3JPAAL
+cA/zoO9U6cbtxmMye489QnoY/FQQTlrcZhMklyUw1hGJeC4cq7Arz4Rj+WpoGTqj/9LBbbOHq7t3
+FWwjPZXJX5UrwCvA92WWeZuxEWKMiRmdiAAOSSdNxLcE3XvpZi+mO+ZNobezmO3BTx8NerPbxMko
+P3SwK1pJIrUcUqsk7OhHaQCPZ96nPWzU5uzQrn8VjoHmyeCZ1wDWGr1YbzxC72BQ4aSKM+uDx3Dx
+zqtHRV+ov6hOlv0bYzonbrPZ6A73yc+44V3FUhu0rdvCH8OT7A2FZoxXEsiuIyv9UnPsDWPzLd/s
+CNtWMfbd5o4ftpD5WOIloh+w7yWH8nWx/9PAWqz07qSMTHLEwfkchlZTyOOPz5GgI9253pluHatK
+zh8ZZxPUOutapeEczWqORCpM9m/LJZkMsdiSRowIo1+MKCfB9pAPUspfx862KkpWVfXPDD/nDcj/
+AM0DB6p9dU37snamwre38NEm3KUsT5THUvsb1qxdsvdmedqrrExBcKP7Y8D9datC8swdkUdgRPHF
+LyUZ/wDFgD2ntJA54I41MH//2Q==
+"
+       preserveAspectRatio="none"
+       height="40"
+       width="40"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient4492);stroke-width:3.48799992;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4488"
+       width="36.51162"
+       height="36.51162"
+       x="345.76755"
+       y="33.790817"
+       ry="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

@@ -16,6 +16,8 @@ export default class SelectState extends Phaser.State {
     preload() {}
 
     create() {
+        this.camera.flash('#000', 300);
+
         // BG tiled sprite
         let bgWidth = Math.max(this.world.width, this.world.height) * 1.3;
         this.bgTile = this.add.tileSprite(0, 0, bgWidth, bgWidth, 'galaxy2-bg');
@@ -107,7 +109,8 @@ export default class SelectState extends Phaser.State {
     }
 
     animateBG() {
-        this.bgTile.tilePosition.y += 0.2;
+        // move BG 20 px / s
+        this.bgTile.tilePosition.y += this.time.elapsedMS * 0.02;
     }
 
     initiateLevelStart(levelIndex, levelArr) {

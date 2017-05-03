@@ -82,10 +82,11 @@ TODO
 * Level pages (selectabe levels, already played levels stored in locaStorage (hashed))
   * level infos (e.g. id, title) in info.js
   * stored in localStorage (id hashed)
-* soundtrack
+* -soundtrack-
 * settings page (disable sound, e.g.)
-* sound effects
+* -sound effects-
 * better splash sceen + loader
+* Title screen with difficulty chooser and copyright info
 
 Copyright Violations
 --------------------
