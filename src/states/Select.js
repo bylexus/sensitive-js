@@ -26,10 +26,14 @@ export default class SelectState extends Phaser.State {
         let levelArr = levels[this.difficulty];
         let levelGroup = this.add.group();
 
+        // Back button:
+        this.add.button(5, 20, 'back_btn', btn => {
+            this.backToTitleScreen();
+        }, this, 0, 1, 1, 0);
 
         // Top info: banner
         const bannerText = 'S E N S I T I V E';
-        this.add.text(20, 20, bannerText, {
+        this.add.text(50, 20, bannerText, {
             font: 'Russo One',
             fontSize: 40,
             fill: '#fcee83',
@@ -91,7 +95,7 @@ export default class SelectState extends Phaser.State {
 
             let fontProps = {
                 font: 'Russo One',
-                fontSize: '60px',
+                fontSize: '40px',
                 fill: '#fff',
                 shadowColor: '#333',
                 shadowBlur: 3,
@@ -125,6 +129,13 @@ export default class SelectState extends Phaser.State {
             });
         });
 
+    }
+
+    backToTitleScreen() {
+        this.camera.fade('#f00', 500);
+        this.camera.onFadeComplete.addOnce(() => {
+            this.state.start('Title', true, false);
+        });
     }
 }
 

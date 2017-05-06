@@ -14,6 +14,9 @@ class GameState extends Phaser.State {
 
         this.levelInfo = levelInfo;
         this.actLevel = this.levelInfo.levels[this.levelInfo.levelIndex];
+
+        this.tileDestroyDelay = config[this.levelInfo.difficulty].tileDestroyDelay;
+        this.playerSpeed = config[this.levelInfo.difficulty].playerSpeed;
     }
 
     preload() {
@@ -128,6 +131,8 @@ class GameState extends Phaser.State {
 
         // register audio:
         this.explosion = this.add.audio('explode');
+
+        this.prevTile = null;
     }
 
     showBgDim(duration, after) {
@@ -279,9 +284,14 @@ class GameState extends Phaser.State {
             alive: false
         });
 
+        // solid stars:
+        tilemap.createFromTiles([9], null, 'starstone', 'bricks', group, {
+            alive: false
+        });
+
         // normal explodes:
         tilemap.createFromTiles([3], null, 'normal', 'bricks', group, {
-            removeDelay: config.tileDestroyDelay
+            removeDelay: this.tileDestroyDelay
         });
 
         // horizontal traversal:
@@ -298,7 +308,7 @@ class GameState extends Phaser.State {
 
         // 2times explodes:
         tilemap.createFromTiles([4], null, '2times', 'bricks', group, {
-            changeDelay: config.tileDestroyDelay
+            changeDelay: this.tileDestroyDelay
         });
         group
             .filter(child => {
@@ -441,11 +451,11 @@ class GameState extends Phaser.State {
 
             // Check special stones:
             // Horizontal Traversal: last stone must be on same col:
-            if (onTile.traversal === 'horizontal' && this.prevTile.y !== onTile.y) {
+            if (this.prevTile && onTile.traversal === 'horizontal' && this.prevTile.y !== onTile.y) {
                 this.setPlayerToTopLeftOfTile(this.prevTile);
             }
             // vertical Traversal: last stone must be on same row:
-            if (onTile.traversal === 'vertical' && this.prevTile.x !== onTile.x) {
+            if (this.prevTile && onTile.traversal === 'vertical' && this.prevTile.x !== onTile.x) {
                 this.setPlayerToTopLeftOfTile(this.prevTile);
             }
 
@@ -559,14 +569,14 @@ class GameState extends Phaser.State {
         if (this.playerDir === Phaser.NONE) {
             if (this.cursors.right.isDown || this.pointerDir === Phaser.RIGHT) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'horizontal')) {
-                    this.player.body.velocity.x = config.playerSpeed;
+                    this.player.body.velocity.x = this.playerSpeed;
                     this.player.body.velocity.y = 0;
                     this.playerDir = Phaser.RIGHT;
                 }
             }
             if (this.cursors.left.isDown || this.pointerDir === Phaser.LEFT) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'horizontal')) {
-                    this.player.body.velocity.x = -1 * config.playerSpeed;
+                    this.player.body.velocity.x = -1 * this.playerSpeed;
                     this.player.body.velocity.y = 0;
                     this.playerDir = Phaser.LEFT;
                 }
@@ -574,14 +584,14 @@ class GameState extends Phaser.State {
             if (this.cursors.up.isDown || this.pointerDir === Phaser.UP) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'vertical')) {
                     this.player.body.velocity.x = 0;
-                    this.player.body.velocity.y = -1 * config.playerSpeed;
+                    this.player.body.velocity.y = -1 * this.playerSpeed;
                     this.playerDir = Phaser.UP;
                 }
             }
             if (this.cursors.down.isDown || this.pointerDir === Phaser.DOWN) {
                 if (!this.actTile.traversal || (this.actTile.traversal === 'vertical')) {
                     this.player.body.velocity.x = 0;
-                    this.player.body.velocity.y = config.playerSpeed;
+                    this.player.body.velocity.y = this.playerSpeed;
                     this.playerDir = Phaser.DOWN;
                 }
             }

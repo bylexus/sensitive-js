@@ -13,7 +13,7 @@ Screens
 
 ![Remake](screen-remake.png)
 
-### Original from 1990
+### Original from 1991 by Oliver Kirva
 
 ![Original](screen-original.png)
 
@@ -69,7 +69,6 @@ $ npm run build # production build
 $ npm watch # dev watch
 ```
 
-
 Working
 --------
 
@@ -78,17 +77,15 @@ Working
 TODO
 -------
 
-* Kid's levels (easier)
-* Level pages (selectabe levels, already played levels stored in locaStorage (hashed))
-  * level infos (e.g. id, title) in info.js
-  * stored in localStorage (id hashed)
-* -soundtrack-
+* Kid's levels (easier, more to come)
 * settings page (disable sound, e.g.)
-* -sound effects-
 * better splash sceen + loader
-* Title screen with difficulty chooser and copyright info
 
 Copyright Violations
 --------------------
-
 Attention: At the moment, I didn't check copyright of the game assets! This is a known issue I have to resolve.
+The following assets are not copyright checked:
+- Galaxy background in game
+- Explosion animation
+
+The rest of the assets (bricks, sounds, other images) are either created by myself or from https://opengameart.org.

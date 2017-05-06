@@ -2,7 +2,14 @@ const config = {
     gameWidth: 800,
     gameHeight: 520,
     tileSize: 40,
-    tileDestroyDelay: 500,
-    playerSpeed: 100
+    normal: {
+        tileDestroyDelay: 480,
+        playerSpeed: 120
+    },
+    easy: {
+        tileDestroyDelay: 800,
+        playerSpeed: 80
+    }
+
 };
 export default config;

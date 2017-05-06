@@ -23,6 +23,7 @@ export default class SplashState extends Phaser.State {
         this.load.image('normal', './assets/bricks/003_brick-normal.png');
         this.load.image('horizontal', './assets/bricks/006_brick-horizontal.png');
         this.load.image('vertical', './assets/bricks/007_brick-vertical.png');
+        this.load.image('starstone', './assets/bricks/008_brick-stars.png');
 
         this.load.spritesheet('explosion-1', './assets/images/explosion_transparent.png',64,64);
         this.load.spritesheet('2times', './assets/bricks/004_brick-2times.png',40,40);
@@ -50,7 +51,7 @@ export default class SplashState extends Phaser.State {
         // let normalLevels = levels.normal;
         // this.state.start('Game',true,false,{
         //     levels: normalLevels,
-        //     levelIndex: 0
+        //     levelIndex: 38
         // });
             //
             //
