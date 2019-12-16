@@ -81,6 +81,11 @@ TODO
 * settings page (disable sound, e.g.)
 * better splash sceen + loader
 
+License information
+-------------------
+
+Copyright (c) 2017 by me. You can use, modify and distribute the code as you like, except for commercial usage.
+
 Copyright Violations
 --------------------
 Attention: At the moment, I didn't check copyright of the game assets! This is a known issue I have to resolve.
